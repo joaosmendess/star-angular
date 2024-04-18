@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.film-card {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    flex-direction: column;
+    
+    padding: 20px;
+    background: linear-gradient(145deg, #0f0c29, #302b63, #24243e);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    width: 40%; 
+    transition: transform 0.2s;
+    cursor: pointer;
+
+    /* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+     
+    background: linear-gradient(145deg, #0f0c29, #302b63, #24243e);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+
+.film-card:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    background-color: linear-gradient(145deg, #0f0c29, #302b63, #24243e);
+    padding: 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+p {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #4e5d94;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.director, .date {
+    background-color: #227093;
+}
+
+.crawl {
+    font-size: 0.9em; /* Menor, para textos longos */
+    overflow-y:scroll ;
+    scroll-behavior: auto;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    height: 105px;
+}
+/* Media query para telas grandes */
+@media (min-width: 992px) { /* Ajuste este breakpoint conforme necessário */
+    .cards-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .film-card {
+        flex: 0 0 30%; /* Cada card terá cerca de 30% da largura do container, permitindo 3 em uma linha */
+    }
+}
+
+/* Media query para telas pequenas */
+@media (max-width: 991px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .film-card {
+        width: 80%; /* Ajuste conforme necessário para preencher mais espaço horizontal */
+    }
+}
+
+/* Importar fontes do Google Fonts */

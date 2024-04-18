@@ -1,0 +1,10 @@
+<div class="card-container" >
+    @for (film of filmList; track $index) {
+        <div class="film-card" id="{{film.id}}">
+            <h1>{{film.title}}</h1>
+            <p class="director">Director: {{film.director}}</p>
+            <p class="crawl">{{film.opening_crawl}}</p>
+            <p class="date">Released: {{film.release_date}}</p>
+        </div>
+    }
+</div>
